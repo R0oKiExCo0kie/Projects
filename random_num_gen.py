@@ -6,17 +6,14 @@ def main():
             print("Enter the Number larger than 0")
             main()
         rand=random.randint(0,top)
-        c=0
-        chance=0
+        guesses=0
         while True:
             try:
                 answer=int(input("Guess the Number: "))
-                chance+=1
+                guesses+=1
                 if answer<rand:
-                    c+=1
                     print("Your Guessed low")
                 elif answer>rand:
-                    c+=1
                     print("You guessed High")
                 elif answer==rand:
                     print("You guessed it Correctly")
